@@ -1,0 +1,12 @@
+.dashboard {
+    .main-toggler {
+        outline: none;
+        border: none;
+        background: none;
+        margin-right: 20px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

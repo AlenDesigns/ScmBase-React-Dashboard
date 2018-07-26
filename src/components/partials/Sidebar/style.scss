@@ -1,0 +1,21 @@
+#sidebar {
+    background: #272c33;
+    color: white;
+    padding: 0;
+
+    .nav-link {
+        text-decoration: none;
+        color: #d2d2d2;
+        font-size: 0.9rem;
+        border-bottom: 1px solid rgba(200, 200, 200, 0.1);
+        transition: all 0.15s;
+
+        i {
+            margin-right: 10px;
+        }
+
+        &:hover {
+            background-color: #444;
+        }
+    }
+}
