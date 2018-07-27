@@ -1,6 +1,8 @@
 import React from 'react';
-import { Nav, NavItem } from 'reactstrap';
+import { Nav, NavItem, Col,UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+
+import DropdownList from './DropdownList';
 
 import './style.scss';
 
@@ -10,6 +12,7 @@ export default class Sidebar extends React.Component {
       return null;
       
     return (
+      <Col sm="12" md="2" id="sidebar" className="m-0">
         <Nav vertical>
          <NavItem>
             <NavLink to="/" className="nav-link">
@@ -48,12 +51,17 @@ export default class Sidebar extends React.Component {
             </NavLink>
           </NavItem>
           <NavItem>
+            <DropdownList linkClass={["nav-link"]} />
+          </NavItem>
+          <NavItem>
             <NavLink to="/settings" className="nav-link">
               <i className="nav-icon icon-settings"></i>
               Settings
             </NavLink>
           </NavItem>
+         
         </Nav>
+      </Col>
     );
   }
 }

@@ -6,9 +6,6 @@ import {
   Link 
 } from 'react-router-dom';
 
-// Pages
-import Home from './pages/Home';
-import Pages from './pages/Pages';
 
 // Partials
 import Dashboard from './partials/Dashboard/Dashboard';
@@ -16,11 +13,11 @@ import Sidebar from './partials/Sidebar/Sidebar';
 
 
 // Layout
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Collapse } from 'reactstrap';
+import Main from './Main';
 
 // Global styles
 import './App.scss';
-
 
 class App extends Component {
   constructor(props) {
@@ -30,29 +27,22 @@ class App extends Component {
       dashOpen: true
     };
 
-    this.handleDashboardToggle = this.handleDashboardToggle.bind(this)
+    this.handleSidebarToggle = this.handleSidebarToggle.bind(this)
   }
 
-  handleDashboardToggle(val) {
-    this.setState({ dashOpen: val });
+  handleSidebarToggle() {
+    this.setState(prevState =>({
+      dashOpen: !prevState.dashOpen
+    }));
   }
 
   render() {
     return (
       <Container id="app" className="App m-0 p-0" fluid={true}>
-        <Dashboard />            
-        <Row className="p-0 m-0">
-          <Col sm="12" md="2" id="sidebar" className="m-0">
-            <Sidebar isOpen={this.state.dashOpen}  /> 
-          </Col>
-          <Col sm="12" md="10" id="content">
-            <main>
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/pages" component={Pages} />
-              </Switch>
-            </main> 
-          </Col>
+        <Dashboard toggleSidebar={this.handleSidebarToggle} />            
+        <Row className="p-0 m-0">       
+          <Sidebar isOpen={this.state.dashOpen} /> 
+          <Main />
         </Row>       
       </Container>
     );

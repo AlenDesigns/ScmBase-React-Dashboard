@@ -10,7 +10,8 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  DropdownItem,
+  Col } from 'reactstrap';
 
   import './style.scss';
   import Logo from '../../../assets/logo.png';
@@ -32,7 +33,9 @@ export default class Dashboard extends React.Component {
   render() {
     return (
         <Navbar color="light" light expand="md" className="dashboard">
-          <button className="main-toggler"><i className="icon icon-menu"></i></button>
+          <button className="main-toggler" onClick={this.props.toggleSidebar}>
+            <i className="icon icon-menu"></i>
+          </button>
           <NavbarBrand href="/">
             <img src={Logo} width="100" alt="Company logo" />
           </NavbarBrand>
@@ -40,17 +43,17 @@ export default class Dashboard extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#">
+                <NavLink href="/settings">
                   <i className="icon icon-settings"></i>
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">
+                <NavLink href="/notifications">
                  <i className="icon icon-bell"></i>
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">
+                <NavLink href="/messages">
                  <i className="icon icon-envelope"></i>
                 </NavLink>
               </NavItem>
