@@ -1,12 +1,11 @@
 import React from 'react';
-import { Nav, NavItem, Col,UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Nav, NavItem, Col} from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-
-import DropdownList from './DropdownList';
 
 import './style.scss';
 
 export default class Sidebar extends React.Component {
+ 
   render() {
     if(!this.props.isOpen)
       return null;
@@ -49,9 +48,6 @@ export default class Sidebar extends React.Component {
               <i className="nav-icon icon-envelope-open"></i>
               Messages
             </NavLink>
-          </NavItem>
-          <NavItem>
-            <DropdownList linkClass={["nav-link"]} />
           </NavItem>
           <NavItem>
             <NavLink to="/settings" className="nav-link">

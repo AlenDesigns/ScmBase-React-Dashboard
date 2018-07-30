@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
 
-import {
-  Switch, 
-  Route, 
-  Link 
-} from 'react-router-dom';
-
-
 // Partials
 import Dashboard from './partials/Dashboard/Dashboard';
 import Sidebar from './partials/Sidebar/Sidebar';
 
 
 // Layout
-import { Container, Row, Col, Collapse } from 'reactstrap';
+import { Container, Row } from 'reactstrap';
 import Main from './Main';
 
 // Global styles
