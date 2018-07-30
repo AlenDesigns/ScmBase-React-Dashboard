@@ -33,10 +33,10 @@ class App extends Component {
     return (
       <Container id="app" className="App m-0 p-0" fluid={true}>
         <Dashboard toggleSidebar={this.handleSidebarToggle} />           
-        <main className="layout">
+        <div className="layout">
           <Sidebar isOpen={this.state.dashOpen} /> 
           <Main />    
-        </main>       
+        </div>       
            
       </Container>
     );
