@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-import {
-    Col
-} from 'reactstrap';
 
 import {
     Route, Switch 
@@ -18,7 +15,6 @@ import AddPage from './pages/Pages/AddPage';
 class Main extends Component {
     render() { 
         return (  
-         <Col sm="12" md="10" id="content">
             <main>
               <Switch>
                 <Route exact path="/" component={Home} />
@@ -26,7 +22,6 @@ class Main extends Component {
                 <Route exact path="/page/add" component={AddPage} />
               </Switch>
             </main> 
-          </Col>
         );
     }
 }

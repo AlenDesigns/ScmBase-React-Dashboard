@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, NavItem, Col} from 'reactstrap';
+import { Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 import './style.scss';
@@ -11,8 +11,7 @@ export default class Sidebar extends React.Component {
       return null;
       
     return (
-      <Col sm="12" md="2" id="sidebar" className="m-0">
-        <Nav vertical>
+        <Nav vertical id="sidebar">
          <NavItem>
             <NavLink to="/" className="nav-link">
               <i className="nav-icon icon-speedometer"></i>
@@ -57,7 +56,6 @@ export default class Sidebar extends React.Component {
           </NavItem>
          
         </Nav>
-      </Col>
     );
   }
 }

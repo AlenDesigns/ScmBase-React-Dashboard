@@ -6,7 +6,7 @@ import Sidebar from './partials/Sidebar/Sidebar';
 
 
 // Layout
-import { Container, Row } from 'reactstrap';
+import { Container } from 'reactstrap';
 import Main from './Main';
 
 // Global styles
@@ -32,11 +32,12 @@ class App extends Component {
   render() {
     return (
       <Container id="app" className="App m-0 p-0" fluid={true}>
-        <Dashboard toggleSidebar={this.handleSidebarToggle} />            
-        <Row className="p-0 m-0">       
+        <Dashboard toggleSidebar={this.handleSidebarToggle} />           
+        <main className="layout">
           <Sidebar isOpen={this.state.dashOpen} /> 
-          <Main />
-        </Row>       
+          <Main />    
+        </main>       
+           
       </Container>
     );
   }
