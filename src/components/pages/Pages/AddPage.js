@@ -4,7 +4,6 @@ import { Button, Form, FormGroup, Label, Input, FormText, Container } from 'reac
 
 
 class AddPage extends Component {
-    
     render() { 
         return (
             <React.Fragment>
@@ -24,6 +23,7 @@ class AddPage extends Component {
                              name="text" 
                              id="content" />
                     </FormGroup>
+                    <Button color="danger">Create</Button>
                 </Form>
             </React.Fragment>
           );

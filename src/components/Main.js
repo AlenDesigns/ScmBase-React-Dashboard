@@ -18,12 +18,17 @@ import AddPage from './pages/Pages/AddPage';
 class Main extends Component {
     render() { 
         return (  
-            <Container fluid={true}>
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/pages" component={Pages} />
-                <Route exact path="/page/add" component={AddPage} />
-              </Switch>
+            <Container fluid={true} className="mt-3">
+              <Card>
+                  <CardBody>
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/pages" component={Pages} />
+                        <Route exact path="/page/add" component={AddPage} />
+                    </Switch>
+                  </CardBody>
+              </Card>
+              
             </Container> 
         );
     }
