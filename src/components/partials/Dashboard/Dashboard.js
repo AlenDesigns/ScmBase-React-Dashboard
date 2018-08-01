@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Collapse,
   Navbar,
@@ -9,10 +9,11 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  DropdownItem
+} from "reactstrap";
 
-  import './style.scss';
-  import Logo from '../../../assets/logo.png';
+import "./style.scss";
+import Logo from "../../../assets/logo.png";
 
 export default class Dashboard extends React.Component {
   constructor(props) {
@@ -30,51 +31,45 @@ export default class Dashboard extends React.Component {
   }
   render() {
     return (
-        <Navbar color="light" light expand="md" className="dashboard">
-          <button className="main-toggler" onClick={this.props.toggleSidebar}>
-            <i className="icon icon-menu"></i>
-          </button>
-          <NavbarBrand href="/">
-            <img src={Logo} width="100" alt="Company logo" />
-          </NavbarBrand>
-          
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/settings">
-                  <i className="icon icon-settings"></i>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/notifications">
-                 <i className="icon icon-bell"></i>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/messages">
-                 <i className="icon icon-envelope"></i>
-                </NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-            </Nav>
-          </Collapse>
-        </Navbar>
+      <Navbar color="light" light expand="md" className="dashboard">
+        <button className="main-toggler" onClick={this.props.toggleSidebar}>
+          <i className="icon icon-menu" />
+        </button>
+        <NavbarBrand href="/">
+          <img src={Logo} width="100" alt="Company logo" />
+        </NavbarBrand>
+
+        <Collapse isOpen={this.state.isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="/settings">
+                <i className="icon icon-settings" />
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/notifications">
+                <i className="icon icon-bell" />
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/messages">
+                <i className="icon icon-envelope" />
+              </NavLink>
+            </NavItem>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                Options
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>Option 1</DropdownItem>
+                <DropdownItem>Option 2</DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem>Reset</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+          </Nav>
+        </Collapse>
+      </Navbar>
     );
   }
 }
