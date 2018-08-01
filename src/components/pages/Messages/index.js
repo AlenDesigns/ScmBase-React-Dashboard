@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import "./styles.scss";
 
-class Home extends Component {
+export class Messages extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Home</h1>
+        <h1>Messages</h1>
         <hr />
-        <p>Welcome to React Dashboard!</p>
+        <p>Welcome to Messages page!</p>
       </React.Fragment>
     );
   }
 }
 
-export default Home;
+export default Messages;

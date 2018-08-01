@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import "./styles.scss";
 
-class Home extends Component {
+export class Reports extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Home</h1>
+        <h1>Reports</h1>
         <hr />
-        <p>Welcome to React Dashboard!</p>
+        <p>Welcome to Reports page!</p>
       </React.Fragment>
     );
   }
 }
 
-export default Home;
+export default Reports;

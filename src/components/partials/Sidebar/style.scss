@@ -24,9 +24,8 @@
             margin-right: 10px;
         }
 
-        &:hover {
-            background-color: #444;
-        }
+
+        
     }
 
     .clearfix {
@@ -35,4 +34,11 @@
         clear: both;
     }
 
+    .hvr-sweep-to-right{
+        &:before {
+            background: #444 !important;
+        }
+    }
+
 }
+

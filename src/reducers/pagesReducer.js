@@ -1,5 +1,5 @@
 const initialState = {
-  users: []
+  pages: []
 };
 
 export default function(state = initialState, action) {
