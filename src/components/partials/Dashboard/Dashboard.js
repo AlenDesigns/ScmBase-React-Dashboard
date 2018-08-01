@@ -32,7 +32,10 @@ export default class Dashboard extends React.Component {
   render() {
     return (
       <Navbar color="light" light expand="md" className="dashboard">
-        <button className="main-toggler" onClick={this.props.toggleSidebar}>
+        <button
+          className="main-toggler hvr-bounce-in"
+          onClick={this.props.toggleSidebar}
+        >
           <i className="icon icon-menu" />
         </button>
         <NavbarBrand href="/">
