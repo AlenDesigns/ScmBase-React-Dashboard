@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 
+import { Card, CardBody } from "reactstrap";
+
 export class NotFound extends Component {
   render() {
     return (
-      <React.Fragment>
-        <h1>404 - NOT FOUND</h1>
-      </React.Fragment>
+      <Card>
+        <h2 className="page-heading p-3">404!</h2>
+        <CardBody className="shadow-sm">
+          <p>Page not found!</p>
+        </CardBody>
+      </Card>
     );
   }
 }

@@ -19,6 +19,7 @@
         font-size: 0.9rem;
         border-bottom: 1px solid rgba(200, 200, 200, 0.1);
         transition: all 0.15s;
+    
 
         i {
             margin-right: 10px;
@@ -34,7 +35,7 @@
         clear: both;
     }
 
-    .hvr-sweep-to-right{
+    .hvr-bounce-to-right{
         &:before {
             background: #444 !important;
         }

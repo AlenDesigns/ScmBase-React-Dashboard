@@ -25,24 +25,30 @@ import Settings from "./pages/Settings";
 // 404
 import NotFound from "./pages/NotFound";
 
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+
 class Main extends Component {
   render() {
     return (
       <Container fluid={true} className="mt-3">
-        <Card>
-          <CardBody>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/admins" component={Admins} />
-              <Route path="/media-library" component={MediaLibrary} />
-              <Route path="/messages" component={Messages} />
-              <Route path="/pages" component={Pages} />
-              <Route path="/reports" component={Reports} />
-              <Route path="/settings" component={Settings} />
-              <Route component={NotFound} />
-            </Switch>
-          </CardBody>
-        </Card>
+        <Route
+          render={({ location }) => (
+            <TransitionGroup>
+              <CSSTransition key={location.key} classNames="fade" timeout={200}>
+                <Switch location={location}>
+                  <Route exact path="/" component={Home} />
+                  <Route path="/admins" component={Admins} />
+                  <Route path="/media-library" component={MediaLibrary} />
+                  <Route path="/messages" component={Messages} />
+                  <Route path="/pages" component={Pages} />
+                  <Route path="/reports" component={Reports} />
+                  <Route path="/settings" component={Settings} />
+                  <Route component={NotFound} />
+                </Switch>
+              </CSSTransition>
+            </TransitionGroup>
+          )}
+        />
       </Container>
     );
   }

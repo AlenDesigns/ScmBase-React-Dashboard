@@ -1,14 +1,19 @@
 import React, { Component } from "react";
 import "./styles.scss";
 
+import { Card, CardBody } from "reactstrap";
+
 export class Settings extends Component {
   render() {
     return (
-      <React.Fragment>
-        <h1>Settings</h1>
-        <hr />
-        <p>Welcome to Settings page!</p>
-      </React.Fragment>
+      <Card>
+        <h2 className="page-heading p-3">
+          <i className="nav-icon icon-settings" /> Settings
+        </h2>
+        <CardBody className="shadow-sm">
+          <p>Welcome to Settings page!</p>
+        </CardBody>
+      </Card>
     );
   }
 }

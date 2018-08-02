@@ -1,14 +1,19 @@
 import React, { Component } from "react";
 import "./styles.scss";
 
+import { Card, CardBody } from "reactstrap";
+
 export class Reports extends Component {
   render() {
     return (
-      <React.Fragment>
-        <h1>Reports</h1>
-        <hr />
-        <p>Welcome to Reports page!</p>
-      </React.Fragment>
+      <Card>
+        <h2 className="page-heading p-3">
+          <i className="nav-icon icon-book-open" /> Reports
+        </h2>
+        <CardBody className="shadow-sm">
+          <p>Welcome to Reports page!</p>
+        </CardBody>
+      </Card>
     );
   }
 }
