@@ -8,6 +8,9 @@ import Sidebar from "./partials/Sidebar/Sidebar";
 import { Container } from "reactstrap";
 import Main from "./Main";
 
+// Animations
+import { CSSTransition } from "react-transition-group";
+
 // Global styles
 import "./App.scss";
 
@@ -33,7 +36,13 @@ class App extends Component {
       <Container id="app" className="App m-0 p-0" fluid={true}>
         <Dashboard toggleSidebar={this.handleSidebarToggle} />
         <div className="layout">
-          <Sidebar isOpen={this.state.dashOpen} />
+          <CSSTransition
+            in={this.state.dashOpen}
+            timeout={100}
+            classNames="sidebar"
+          >
+            <Sidebar dashOpen={this.state.dashOpen} />
+          </CSSTransition>
           <Main />
         </div>
       </Container>

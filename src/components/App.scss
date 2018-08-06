@@ -1,17 +1,24 @@
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:100,200,300,400');
 
+@font-face {
+    font-family: TextFont;
+    src: url('../assets/fonts/psreg.ttf');
+}
+
 body,
 html {
     background: #ecebeb;
     color: #5e6a7b;
     height: 100%;
-    font-family: 'Nunito', sans-serif;
+    font-family: TextFont, 'Nunito', sans-serif;
 }
 
 * {
     box-sizing: border-box;
 }
+
+
 
 /* Typography */
 .page-heading {
@@ -55,4 +62,15 @@ html {
 
 .fade-exit {
     opacity: 0;
+}
+
+#sidebar {
+    transition: all 0.2s ease-in-out;
+}
+.sidebar-enter {
+    width: 200px;
+    
+}
+.sidebar-exit-done {
+    width: 50px !important;
 }
