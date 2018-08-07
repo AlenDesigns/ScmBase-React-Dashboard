@@ -7,6 +7,7 @@ import Sidebar from "./partials/Sidebar/Sidebar";
 // Layout
 import { Container } from "reactstrap";
 import Main from "./Main";
+import TabNav from "./partials/TabNav/TabNav";
 
 // Animations
 import { CSSTransition } from "react-transition-group";
@@ -43,6 +44,7 @@ class App extends Component {
           >
             <Sidebar dashOpen={this.state.dashOpen} />
           </CSSTransition>
+          <TabNav />
           <Main />
         </div>
       </Container>

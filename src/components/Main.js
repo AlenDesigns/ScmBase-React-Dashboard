@@ -22,6 +22,8 @@ import Pages from "./pages/Pages";
 import Reports from "./pages/Reports";
 import Settings from "./pages/Settings";
 
+import AddPage from "./pages/Pages/AddPage";
+
 // 404
 import NotFound from "./pages/NotFound";
 
@@ -30,19 +32,22 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 class Main extends Component {
   render() {
     return (
-      <Container fluid={true} className="mt-3">
+      <Container fluid={true} style={{ padding: 0 }}>
         <Route
           render={({ location }) => (
             <TransitionGroup>
               <CSSTransition key={location.key} classNames="fade" timeout={200}>
                 <Switch location={location}>
                   <Route exact path="/" component={Home} />
-                  <Route path="/admins" component={Admins} />
-                  <Route path="/media-library" component={MediaLibrary} />
-                  <Route path="/messages" component={Messages} />
-                  <Route path="/pages" component={Pages} />
-                  <Route path="/reports" component={Reports} />
-                  <Route path="/settings" component={Settings} />
+                  <Route exact path="/admins" component={Admins} />
+                  <Route exact path="/media-library" component={MediaLibrary} />
+                  <Route exact path="/messages" component={Messages} />
+                  <Route exact path="/pages" component={Pages} />
+                  <Route exact path="/reports" component={Reports} />
+                  <Route exact path="/settings" component={Settings} />
+
+                  <Route path="/pages/new" component={AddPage} />
+
                   <Route component={NotFound} />
                 </Switch>
               </CSSTransition>

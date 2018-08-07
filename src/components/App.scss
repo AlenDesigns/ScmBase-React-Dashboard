@@ -8,7 +8,6 @@
 
 body,
 html {
-    background: #ecebeb;
     color: #5e6a7b;
     height: 100%;
     font-family: TextFont, 'Nunito', sans-serif;
@@ -26,7 +25,8 @@ html {
     line-height: 2rem;
     font-weight: 100;
     vertical-align: baseline;
-    border-bottom: 1px solid lightgray;
+    /*border-bottom: 1px solid lightgray;*/
+    margin: 0;
     i {
         color: #C0392B;
         line-height: 2rem;

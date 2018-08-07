@@ -1,0 +1,20 @@
+.tabnav {
+    background-color: #444444;
+    width: 200px;
+
+    .nav-link {
+        border-bottom: 1px solid rgba(200, 200, 200, 0.1);
+        color: #d2d2d2;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: all .3s;
+        width: 100%;
+        
+        &:hover {
+            border-left: 4px solid #C0392B;
+            color: #fff;
+            padding-left: 20px;
+        }
+    }
+
+}
