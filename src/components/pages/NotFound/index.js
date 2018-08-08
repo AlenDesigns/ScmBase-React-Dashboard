@@ -1,16 +1,12 @@
 import React, { Component } from "react";
 
-import { Card, CardBody } from "reactstrap";
-
 export class NotFound extends Component {
   render() {
     return (
-      <Card>
-        <h2 className="page-heading p-3">404!</h2>
-        <CardBody className="shadow-sm">
-          <p>Page not found!</p>
-        </CardBody>
-      </Card>
+      <div className="p-3">
+        <h2 className="page-heading">404</h2>
+        <p>Welcome to 404 page!</p>
+      </div>
     );
   }
 }

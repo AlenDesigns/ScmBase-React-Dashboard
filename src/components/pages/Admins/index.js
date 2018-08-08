@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 import "./styles.scss";
 
-import { Card, CardBody } from "reactstrap";
-
 export class Admins extends Component {
   render() {
     return (
-      <div className="p-2">
-        <h2 className="page-heading p-3">
-          <i className="nav-icon icon-user" /> Admins
-        </h2>
-        <p>Welcome to admins page!</p>
+      <div className="p-3">
+        <h2 className="page-heading">Admins</h2>
+        <div className="content">
+          <p>Welcome to admins page!</p>
+        </div>
       </div>
     );
   }

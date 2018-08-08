@@ -5,11 +5,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  NavLink
 } from "reactstrap";
 
 import "./style.scss";
@@ -31,7 +27,7 @@ export default class Dashboard extends React.Component {
   }
   render() {
     return (
-      <Navbar color="light" light expand="md" className="dashboard shadow-sm">
+      <Navbar color="light" light expand="md" className="dashboard">
         <button
           className="main-toggler hvr-bounce-in"
           onClick={this.props.toggleSidebar}

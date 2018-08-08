@@ -15,6 +15,12 @@
             color: #fff;
             padding-left: 20px;
         }
+
+        &.active {
+            border-left: 4px solid #C0392B;
+            color: #fff;
+            padding-left: 20px;
+        }
     }
 
 }

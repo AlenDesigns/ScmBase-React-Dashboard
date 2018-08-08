@@ -1,17 +1,8 @@
 import React, { Component } from "react";
 
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, NavLink } from "react-router-dom";
 
-import {
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Button,
-  Container
-} from "reactstrap";
+import { Container } from "reactstrap";
 
 // Pages
 import Admins from "./pages/Admins";
@@ -38,8 +29,18 @@ class Main extends Component {
             <TransitionGroup>
               <CSSTransition key={location.key} classNames="fade" timeout={200}>
                 <Switch location={location}>
-                  <Route exact path="/" component={Home} />
-                  <Route exact path="/admins" component={Admins} />
+                  <Route
+                    exact
+                    path="/"
+                    render={({ match }) => (
+                      <NavLink to={`${match.url}/test`}>ASD</NavLink>
+                    )}
+                  />
+                  <Route
+                    exact
+                    path="/admins/test"
+                    render={({ match }) => <h1>TEST</h1>}
+                  />
                   <Route exact path="/media-library" component={MediaLibrary} />
                   <Route exact path="/messages" component={Messages} />
                   <Route exact path="/pages" component={Pages} />
