@@ -23,33 +23,35 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 class Main extends Component {
   render() {
     return (
-      <Container fluid={true} style={{ padding: 0 }}>
+      <Container fluid={true} style={{ padding: 0 }} className="flex-column">
         <Route
           render={({ location }) => (
-            <TransitionGroup>
+            <TransitionGroup className="h-100">
               <CSSTransition key={location.key} classNames="fade" timeout={200}>
                 <Switch location={location}>
+                  <Route exact path="/" render={({ match }) => <Home />} />
                   <Route
                     exact
-                    path="/"
+                    path="/dashboard"
                     render={({ match }) => (
-                      <NavLink to={`${match.url}/test`}>ASD</NavLink>
+                      <div id="particles-js" className="full-height-particles">
+                        Particles
+                      </div>
                     )}
                   />
                   <Route
                     exact
-                    path="/admins/test"
-                    render={({ match }) => <h1>TEST</h1>}
+                    path="/admins/sub1"
+                    render={({ match }) => <h1>Admins</h1>}
                   />
-                  <Route exact path="/media-library" component={MediaLibrary} />
+                  {/*<Route exact path="/media-library" component={MediaLibrary} />
                   <Route exact path="/messages" component={Messages} />
                   <Route exact path="/pages" component={Pages} />
                   <Route exact path="/reports" component={Reports} />
                   <Route exact path="/settings" component={Settings} />
 
                   <Route path="/pages/new" component={AddPage} />
-
-                  <Route component={NotFound} />
+                  */}
                 </Switch>
               </CSSTransition>
             </TransitionGroup>

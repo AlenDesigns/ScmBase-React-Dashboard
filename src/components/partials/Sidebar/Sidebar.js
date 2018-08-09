@@ -13,43 +13,43 @@ export default class Sidebar extends React.Component {
         <NavItem className="hvr-bounce-to-right">
           <NavLink to="/dashboard" className="nav-link">
             <i className="nav-icon icon-speedometer" />
-            {dashOpen && "Dashboard"}
+            <span className="nav-link-text">Dashboard</span>
           </NavLink>
         </NavItem>
         <NavItem className="hvr-bounce-to-right">
           <NavLink to="/admins" className="nav-link">
             <i className="nav-icon icon-user" />
-            {dashOpen && "Admins"}
+            <span className="nav-link-text">Admins</span>
           </NavLink>
         </NavItem>
         <NavItem className="hvr-bounce-to-right">
           <NavLink to="/pages" className="nav-link">
             <i className="nav-icon icon-note" />
-            {dashOpen && "Pages"}
+            <span className="nav-link-text">Pages</span>
           </NavLink>
         </NavItem>
         <NavItem className="hvr-bounce-to-right">
           <NavLink to="/media-library" className="nav-link">
             <i className="nav-icon icon-camera" />
-            {dashOpen && "Media Library"}
+            <span className="nav-link-text">Media Library</span>
           </NavLink>
         </NavItem>
         <NavItem className="hvr-bounce-to-right">
           <NavLink to="/reports" className="nav-link">
             <i className="nav-icon icon-book-open" />
-            {dashOpen && "Reports"}
+            <span className="nav-link-text">Reports</span>
           </NavLink>
         </NavItem>
         <NavItem className="hvr-bounce-to-right">
           <NavLink to="/messages" className="nav-link">
             <i className="nav-icon icon-envelope-open" />
-            {dashOpen && "Messages"}
+            <span className="nav-link-text">Messages</span>
           </NavLink>
         </NavItem>
         <NavItem className="hvr-bounce-to-right">
           <NavLink to="/settings" className="nav-link">
             <i className="nav-icon icon-settings" />
-            {dashOpen && "Settings"}
+            <span className="nav-link-text">Settings</span>
           </NavLink>
         </NavItem>
       </Nav>

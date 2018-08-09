@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import "./styles.scss";
 
+import Particles from "react-particles-js";
+import ParticlesConfig from "./particles";
+
 class Home extends Component {
+  componentDidMount = () => {
+    console.log(ParticlesConfig);
+  };
+
   render() {
     return (
-      <div className="p-3">
-        <h2 className="page-heading">Home</h2>
-        <p>Welcome to home page!</p>
-      </div>
+      <Particles params={ParticlesConfig} className="full-height-particles" />
     );
   }
 }

@@ -20,7 +20,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      dashOpen: true
+      dashOpen: true,
+      tabOpen: true
     };
 
     this.handleSidebarToggle = this.handleSidebarToggle.bind(this);
@@ -39,12 +40,19 @@ class App extends Component {
         <div className="layout">
           <CSSTransition
             in={this.state.dashOpen}
-            timeout={100}
+            timeout={150}
             classNames="sidebar"
           >
             <Sidebar dashOpen={this.state.dashOpen} />
           </CSSTransition>
-          <TabNav />
+          <CSSTransition
+            in={this.state.tabOpen}
+            timeout={300}
+            classNames="tabnav"
+          >
+            <TabNav />
+          </CSSTransition>
+
           <Main />
         </div>
       </Container>
