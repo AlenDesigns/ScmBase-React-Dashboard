@@ -1,7 +1,7 @@
 const data = {
   particles: {
     number: {
-      value: 120,
+      value: 80,
       density: {
         enable: true,
         value_area: 800
