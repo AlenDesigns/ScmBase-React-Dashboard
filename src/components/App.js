@@ -9,6 +9,9 @@ import { Container } from "reactstrap";
 import Main from "./Main";
 import TabNav from "./partials/TabNav/TabNav";
 
+// Particles
+import Particles from "./partials/Particles";
+
 // Animations
 import { CSSTransition } from "react-transition-group";
 
@@ -40,7 +43,7 @@ class App extends Component {
         <div className="layout">
           <CSSTransition
             in={this.state.dashOpen}
-            timeout={150}
+            timeout={250}
             classNames="sidebar"
           >
             <Sidebar dashOpen={this.state.dashOpen} />
@@ -55,6 +58,8 @@ class App extends Component {
 
           <Main />
         </div>
+
+        <Particles />
       </Container>
     );
   }

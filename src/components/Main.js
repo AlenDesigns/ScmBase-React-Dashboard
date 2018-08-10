@@ -6,7 +6,7 @@ import { Container } from "reactstrap";
 
 // Pages
 import Admins from "./pages/Admins";
-import Home from "./pages/Home";
+
 import MediaLibrary from "./pages/MediaLibrary";
 import Messages from "./pages/Messages";
 import Pages from "./pages/Pages";
@@ -29,7 +29,11 @@ class Main extends Component {
             <TransitionGroup className="h-100">
               <CSSTransition key={location.key} classNames="fade" timeout={200}>
                 <Switch location={location}>
-                  <Route exact path="/" render={({ match }) => <Home />} />
+                  <Route
+                    exact
+                    path="/"
+                    render={({ match }) => <h1> Home </h1>}
+                  />
                   <Route
                     exact
                     path="/dashboard"
@@ -42,7 +46,11 @@ class Main extends Component {
                   <Route
                     exact
                     path="/admins/sub1"
-                    render={({ match }) => <h1>Admins</h1>}
+                    render={({ match }) => (
+                      <div className="cont">
+                        <AddPage />
+                      </div>
+                    )}
                   />
                   {/*<Route exact path="/media-library" component={MediaLibrary} />
                   <Route exact path="/messages" component={Messages} />

@@ -14,8 +14,7 @@ class AddPage extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1 className="display-4">Add new page</h1>
-        <hr />
+        <h1 className="page-heading">Add page</h1>
         <Form>
           <FormGroup>
             <Label for="title">Title</Label>

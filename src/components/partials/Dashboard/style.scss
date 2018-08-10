@@ -1,5 +1,7 @@
 .dashboard {
     border-bottom: 1px solid lightgray;
+    z-index: 2;
+    background: rgba(255,255,255,.85);
     .main-toggler {
         outline: none;
         border: none;

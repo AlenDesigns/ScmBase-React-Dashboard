@@ -1,8 +1,10 @@
 #sidebar {
-    background: #272c33;
+    /*background: #272c33;*/
+    background: rgba(39, 44, 51, .85);
     color: white;
     padding: 0;
     width: 15%;
+    z-index: 2;
 
     .dropdown-menu {
         position: relative !important;
@@ -39,12 +41,12 @@
 
     .hvr-bounce-to-right{
         &:before {
-            background: #444 !important;
+            background: #9A291D !important;
         }
     }
 
     .active {
-        background: #444 !important;
+        background: #9A291D !important;
     }
 
 
